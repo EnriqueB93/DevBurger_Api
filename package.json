@@ -13,16 +13,16 @@
   "license": "ISC",
   "description": "devburgerApi",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.5"
   },
   "devDependencies": {
-    "@eslint/js": "^9.15.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
+    "@biomejs/biome": "1.9.4",
     "globals": "^15.12.0",
     "nodemon": "^3.1.7",
+    "sequelize-cli": "^6.6.2",
     "sucrase": "^3.35.0"
   }
 }
