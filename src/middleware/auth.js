@@ -11,12 +11,12 @@ function authMiddleware(request, response, next) {
   const token = authToken.split(" ").at(1);
 
   try {
-    jwt.verify(token, authconfig.secret, (err, decoded) => {
+    jwt.verify(token, authconfig.secret, (err, decode) => {
       if (err) {
         throw new Error();
       }
 
-      request.userId = decoded.id;
+      request.userId = decode.id;
     });
   } catch (err) {
     return response.status(401).json({ error: "token is invalid" });
