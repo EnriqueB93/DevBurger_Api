@@ -26,3 +26,4 @@ function authMiddleware(request, response, next) {
 }
 
 export default authMiddleware;
+("");
