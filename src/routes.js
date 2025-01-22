@@ -4,6 +4,7 @@ import authMiddleware from './app/middleware/auth.js';
 import multerConfig from './config/multer';
 
 import CategoryControlle from './app/controllers/CategoryControlle.js';
+import OrderController from './app/controllers/OrderController.js';
 import ProductsController from './app/controllers/ProductsController.js';
 import SessionController from './app/controllers/SessionConhtroller.js';
 import UserController from './app/controllers/UserController.js';
@@ -21,5 +22,7 @@ routes.get('/products', ProductsController.index);
 
 routes.post('/categories', CategoryControlle.store);
 routes.get('/categories', CategoryControlle.index);
+
+routes.post('/orders', OrderController.store);
 
 export default routes;
