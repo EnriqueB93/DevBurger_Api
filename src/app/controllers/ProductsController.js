@@ -1,5 +1,6 @@
 import * as Yup from 'yup';
 import Category from '../models/Category';
+import User from '../models/User';
 import Product from '../models/product';
 
 class ProductsController {
@@ -14,6 +15,12 @@ class ProductsController {
 			schema.validateSync(request.body, { abortEarly: false });
 		} catch (err) {
 			return response.status(401).json({ error: err.errors });
+		}
+
+		const { admin: isAdmin } = await User.findByPk(request.userId);
+
+		if (!isAdmin) {
+			return response.status(401).json();
 		}
 
 		const { filename: path } = request.file;
