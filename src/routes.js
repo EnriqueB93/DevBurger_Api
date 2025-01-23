@@ -24,5 +24,7 @@ routes.post('/categories', CategoryControlle.store);
 routes.get('/categories', CategoryControlle.index);
 
 routes.post('/orders', OrderController.store);
+routes.get('/orders', OrderController.index);
+routes.put('/orders/:id', OrderController.update);
 
 export default routes;
