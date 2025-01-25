@@ -21,8 +21,9 @@ routes.post('/products', upload.single('file'), ProductsController.store);
 routes.get('/products', ProductsController.index);
 routes.put('/products/:id', upload.single('file'), ProductsController.update);
 
-routes.post('/categories', CategoryControlle.store);
+routes.post('/categories', upload.single('file'), CategoryControlle.store);
 routes.get('/categories', CategoryControlle.index);
+routes.put('/categories/:id', upload.single('file'), CategoryControlle.update);
 
 routes.post('/orders', OrderController.store);
 routes.get('/orders', OrderController.index);
