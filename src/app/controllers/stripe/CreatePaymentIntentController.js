@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import Stripe from 'stripe';
 import * as Yup from 'yup';
 dotenv.config();
-''
+('');
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const caculateOrderAmount = (products) => {
@@ -10,7 +10,7 @@ const caculateOrderAmount = (products) => {
 		return current.price * current.quantity + acc;
 	}, 0);
 
-	return total * 100;
+	return total;
 };
 
 class CreatePaymentIntentController {
